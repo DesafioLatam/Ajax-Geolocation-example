@@ -1,0 +1,32 @@
+<div class="col-md-9">
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Name:</strong>
+	  <%= @store.name %>
+	</p>
+
+	<p>
+	  <strong>Latitude:</strong>
+	  <%= @store.latitude %>
+	</p>
+
+	<p>
+	  <strong>Longitude:</strong>
+	  <%= @store.longitude %>
+	</p>
+
+	<p>
+	  <strong>Address:</strong>
+	  <%= @store.address %>
+	</p>
+
+	<%= link_to 'Edit', edit_store_path(@store) %> |
+	<%= link_to 'Back', stores_path %>
+</div>
+<div class="col-md-3">
+	<h2>Otras tiendas </h2>
+	<% @stores_near.each do |store| %>
+		<%= store.name %>
+	<% end %>
+</div>
